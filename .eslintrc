@@ -1,0 +1,105 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+
+  "plugins": ["eslint-plugin-import"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "no-var": "warn",
+    "arrow-body-style": "error",
+    "constructor-super": "error",
+    "guard-for-in": "error",
+    "id-blacklist": "off",
+    "id-match": "off",
+    "import/no-deprecated": "warn",
+    "no-bitwise": "error",
+    "no-caller": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "log",
+          "dirxml",
+          "warn",
+          "error",
+          "dir",
+          "timeLog",
+          "assert",
+          "clear",
+          "count",
+          "countReset",
+          "group",
+          "groupCollapsed",
+          "groupEnd",
+          "table",
+          "Console",
+          "markTimeline",
+          "profile",
+          "profileEnd",
+          "timeline",
+          "timelineEnd",
+          "timeStamp",
+          "context"
+        ]
+      }
+    ],
+    "no-debugger": "error",
+    "no-empty": "off",
+    "no-eval": "error",
+    "no-fallthrough": "error",
+    "no-new-wrappers": "error",
+
+    "no-shadow": [
+      "error",
+      {
+        "hoist": "all"
+      }
+    ],
+    "no-throw-literal": "error",
+    "no-undef-init": "error",
+    "no-underscore-dangle": "off",
+    "no-unused-labels": "error",
+
+    "prefer-const": "error",
+    "radix": "error",
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": ["/"]
+      }
+    ],
+    "indent": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "linebreak-style": 0,
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true } ],
+    "consistent-return": 0,
+    "max-len": ["error", { "code": 100 }],
+    "arrow-parens": 0,
+    "class-methods-use-this": 0
+  }
+}
