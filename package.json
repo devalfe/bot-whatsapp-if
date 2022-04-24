@@ -2,9 +2,15 @@
   "name": "bot-whatsapp-if",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor server.js",
+    "dev": "cross-env NODE_ENV=development nodemon --harmony server.js --exec babel-node",
+    "lint": "eslint --color -c .eslintrc --ext .js .",
+    "format:write": "prettier **/**/*.{ts,tsx,js,jsx,json} --write",
+    "pretty-quick": "pretty-quick",
+    "release": "standard-version && git push --follow-tags origin release"
   },
   "keywords": [],
   "repository": {
@@ -44,6 +50,7 @@
   "dependencies": {
     "@google-cloud/dialogflow": "^4.6.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^11.0.0",
     "exceljs": "^4.3.0",
     "express": "^4.17.2",
@@ -56,7 +63,8 @@
     "qrcode-terminal": "^0.12.0",
     "socket.io": "^4.4.1",
     "stormdb": "^0.5.2",
-    "whatsapp-web.js": "^1.16.5"
+    "whatsapp-web.js": "^1.16.5",
+    "config-lite": "^1.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
@@ -64,6 +72,10 @@
     "@types/babel-core": "^6.25.6",
     "@types/cors": "^2.8.10",
     "babel-eslint": "^10.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.22.1",
