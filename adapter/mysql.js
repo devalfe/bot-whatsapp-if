@@ -1,6 +1,7 @@
-const { connection } = require('../config/mysql');
+const { connection } = require('../database/mysql');
 
-import config from 'config-lite';
+// import config from 'config-lite';
+const config = require('config-lite');
 
 const DATABASE_NAME = config.db.database || 'db_test';
 
@@ -9,7 +10,7 @@ const getData = (message = '', callback) =>
     `SELECT * FROM ${DATABASE_NAME}.initial WHERE keywords LIKE '%${message}%'  LIMIT 1`,
     (error, results) => {
       const [response] = results;
-      const key = response?.option_key || null;
+      const key = response.option_key || null;
       callback(key);
     }
   );
@@ -21,9 +22,9 @@ const getReply = (option_key = '', callback) =>
       const [response] = results;
       console.log(response);
       const value = {
-        replyMessage: response?.replyMessage || '',
-        trigger: response?.trigger || '',
-        media: response?.media || ''
+        replyMessage: response.replyMessage || '',
+        trigger: response.trigger || '',
+        media: response.media || ''
       };
       callback(value);
     }
@@ -41,9 +42,9 @@ const getMessages = number =>
           const [response] = results;
           console.log(response);
           const value = {
-            replyMessage: response?.replyMessage || '',
-            trigger: response?.trigger || '',
-            media: response?.media || ''
+            replyMessage: response.replyMessage || '',
+            trigger: response.trigger || '',
+            media: response.media || ''
           };
           resolve(value);
         }

@@ -14,4 +14,4 @@ const saveMedia = media => {
   });
 };
 
-module.exports = { saveMedia };
+module.exports = saveMedia;

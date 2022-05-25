@@ -1,0 +1,128 @@
+{
+  "DEFAULT": {
+    "replyMessage": [
+      "*Esta respuesta es un respuesta default* cuando no se consigue una palabra clave \n",
+      "Prueba escribiendo *hola* \n"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_0": {
+    "replyMessage": ["El flujo ha finalizado \n"],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_1": {
+    "replyMessage": [
+      "Hola! y✌️ Bienvenido a este 🤖 CHATBOT de Whatsapp, de *Innova Funding* \n",
+      "te puedo ayudar en algo😎  \n",
+      "Si necesitas ver más información \n",
+      "escribe *información* o *info*, *youtube* o escribe *audio*"
+    ],
+    "media": "https://media.giphy.com/media/4zK0csmzrL4E0nY6H5/giphy.gif",
+    "trigger": null
+  },
+  "STEP_2": {
+    "replyMessage": [
+      "Perfecto, te voy a pasar la lista ",
+      "de los temas que tengo y un breve video 🙂🤖 \n\n",
+      "*Adelanto* Adelanto de pago de facturas \n",
+      "*Quiero* Quiero invertir con ustedes \n",
+      "*Tengo* Tengo facturas impagadas \n",
+      "*Innova* ¿Qué es Innova Funding? \n",
+      "*Otras* Otras opciones \n\n",
+      "Escribe la palabra del tema que te interese \n"
+    ],
+    "media": "https://mk0innovafundin7pnjt.kinstacdn.com/wp-content/uploads/2022/04/Nota-vlog-900x604.jpg",
+    "trigger": null
+  },
+  "STEP_2_1": {
+    "replyMessage": [
+      "Perfecto, Innova Funding te ayuda a obtener \n",
+      "liquidez con tus facturas por cobrar a través  \n",
+      "de nuestra plataforma.  \n",
+      "*(facturador)* https://www.innova-funding.com/nuevo-facturador-electronico/ \n\n",
+      "*(factoring)* https://www.innova-funding.com/factoring/ \n\n",
+      "😎😎😎"
+    ],
+    "media": "https://media.giphy.com/media/4zK0csmzrL4E0nY6H5/giphy.gif",
+    "trigger": null
+  },
+  "STEP_2_2": {
+    "replyMessage": [
+      "¿Ha invertido alguna vez  \n",
+      " en bolsa, fondos u otras  \n",
+      "herramientas parecidas de inversión? \n",
+      "🤖"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_2_3": {
+    "replyMessage": [
+      "Por favor, indicanos tu correo electrónico \n ",
+      " en caso nos desconectemos, para poder",
+      " ayudarte con mayor información",
+      " 😮"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_2_4": {
+    "replyMessage": [
+      "Por favor, indicanos tu correo electrónico \n ",
+      " en caso nos desconectemos, para poder",
+      " ayudarte con mayor información",
+      " 😮"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_3": {
+    "replyMessage": [
+      "Por favor, indicanos tu correo electrónico \n ",
+      " en caso nos desconectemos, para poder",
+      " ayudarte con mayor información",
+      " 😮"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_4": {
+    "replyMessage": ["Gracias a ti! \n"],
+    "media": "https://www.innova-funding.com/blog/",
+    "trigger": null
+  },
+  "STEP_5": {
+    "replyMessage": [
+      "Muy bien te comparto el canal de Youtube \n",
+      "https://youtube.com/innova-funding \n"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_6": {
+    "replyMessage": [
+      "Perfecto, te voy a pasar la lista ",
+      "de los temas que tengo y un breve video 🙂🤖 \n\n",
+      "*Adelanto* Adelanto de pago de facturas \n",
+      "*Quiero* Quiero invertir con ustedes \n",
+      "*Tengo* Tengo facturas impagadas \n",
+      "*Innova* ¿Qué es Innova Funding? \n",
+      "*Otras* Otras opciones \n\n",
+      "Escribe la palabra del tema que te interese \n"
+    ],
+    "media": "https://media.giphy.com/media/4zK0csmzrL4E0nY6H5/giphy.gif",
+    "trigger": null
+  },
+  "STEP_7": {
+    "replyMessage": ["Vente al telegram \n", "https://t.me/devalfebot \n"],
+    "media": null,
+    "trigger": null
+  },
+  "STEP_8": {
+    "replyMessage": ["Esto es una nota de voz \n"],
+    "media": "nota-de-voz.mp3",
+    "trigger": null
+  }
+}

@@ -88,5 +88,8 @@
     "pretty-quick": "^3.1.0",
     "supervisor": "^0.11.0",
     "pm2": "^5.1.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }

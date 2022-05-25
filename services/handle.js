@@ -3,7 +3,7 @@ const http = require('http'); // or 'https' for https:// URLs
 const https = require('https'); // or 'https' for https:// URLs
 const fs = require('fs');
 const qr = require('qr-image');
-import config from 'config-lite';
+const config = require('config-lite');
 
 const MULTI_DEVICE = config.multiDevice || 'false';
 
@@ -94,6 +94,11 @@ const createClient = (session = {}, login = false) => {
     };
   }
 };
+const isValidNumber = rawNumber => {
+  const regexGroup = /\@g.us\b/gm;
+  const exist = rawNumber.match(regexGroup);
+  return !exist;
+};
 
 module.exports = {
   cleanNumber,
@@ -101,5 +106,6 @@ module.exports = {
   generateImage,
   checkIsUrl,
   checkEnvFile,
-  createClient
+  createClient,
+  isValidNumber
 };

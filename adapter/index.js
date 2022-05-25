@@ -2,11 +2,11 @@ const { getData, getReply, saveMessageMysql } = require('./mysql');
 const { saveMessageJson } = require('./jsonDb');
 const { getDataIa } = require('./diaglogflow');
 const stepsInitial = require('../diaglog/initial.json');
-const stepsResponse = require('../diaglog/response.json');
-import config from 'config-lite';
+const stepsReponse = require('../diaglog/response.json');
+const config = require('config-lite');
 
 const get = message =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     /**
      * Si no estas usando un gesto de base de datos
      */
@@ -27,13 +27,13 @@ const get = message =>
   });
 
 const reply = step =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     /**
      * Si no estas usando un gesto de base de datos
      */
     if (config.connection === 'none') {
       let resData = { replyMessage: '', media: null, trigger: null };
-      const responseFind = stepsResponse[step] || {};
+      const responseFind = stepsReponse[step] || {};
       resData = {
         ...resData,
         ...responseFind,
@@ -55,7 +55,7 @@ const reply = step =>
   });
 
 const getIA = message =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     /**
      * Si usas dialogflow
      */
@@ -77,15 +77,17 @@ const getIA = message =>
  * @returns
  */
 const saveMessage = (message, trigger, number) =>
-  new Promise(async resolve => {
+  new Promise(async (resolve, reject) => {
     switch (config.connection) {
       case 'mysql':
         resolve(await saveMessageMysql(message, trigger, number));
         break;
       case 'none':
+        console.log(config.connection);
         resolve(await saveMessageJson(message, trigger, number));
         break;
       default:
+        resolve(true);
         break;
     }
   });

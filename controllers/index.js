@@ -1,5 +1,7 @@
-import web from './web.controller';
+const api = require('./api.controller');
+const web = require('./web.controller');
 
-export default {
+module.exports = {
+  api,
   web
 };

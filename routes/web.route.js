@@ -1,8 +1,7 @@
-import express from 'express';
-import controllers from '../controllers';
-
+const express = require('express');
 const router = express.Router();
+const { qrCode } = require('../controllers/web.controller');
 
-router.use('/qrcode', controllers.web.qrCode);
+router.use('/qrcode', qrCode);
 
-export default router;
+module.exports = router;

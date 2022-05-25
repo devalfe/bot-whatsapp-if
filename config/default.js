@@ -7,6 +7,7 @@ module.exports = {
   saveMedia: process.env.SAVE_MEDIA,
   language: process.env.LANGUAGE,
   connection: process.env.CONNECTION,
+  keepDialogFlow: process.env.KEEP_DIALOG_FLOW,
   db: {
     database: process.env.DB_DATABASE || '',
     username: process.env.DB_USER || '',

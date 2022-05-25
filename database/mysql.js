@@ -1,5 +1,5 @@
-import mysql from 'mysql';
-import config from 'config-lite';
+const mysql = require('mysql');
+const config = require('config-lite');
 
 const connection = mysql.createConnection({
   host: config.db.host,

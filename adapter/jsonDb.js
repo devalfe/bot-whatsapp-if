@@ -10,7 +10,7 @@ const saveMessageJson = (message, trigger, number) =>
       db.default({ messages: [] });
       // add new users entry
       db.get('messages').push({ message, date, trigger });
-      db.save();
+      await db.save();
       resolve('Saved');
     } catch (error) {
       console.log(error);
