@@ -11,9 +11,8 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-
   "plugins": ["eslint-plugin-import"],
-  "parser": "babel-eslint",
+  //  "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 6
@@ -62,7 +61,6 @@
     "no-eval": "error",
     "no-fallthrough": "error",
     "no-new-wrappers": "error",
-
     "no-shadow": [
       "error",
       {
@@ -73,7 +71,6 @@
     "no-undef-init": "error",
     "no-underscore-dangle": "off",
     "no-unused-labels": "error",
-
     "prefer-const": "error",
     "radix": "error",
     "spaced-comment": [
@@ -92,13 +89,32 @@
     ],
     "no-unused-vars": [
       "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
     ],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     "linebreak-style": 0,
-    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true } ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
     "consistent-return": 0,
-    "max-len": ["error", { "code": 100 }],
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ],
     "arrow-parens": 0,
     "class-methods-use-this": 0
   }
