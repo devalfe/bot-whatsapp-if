@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/370f9536-8814-4fa1-92e2-0bca36db884a/microsoft.web/sites/subscriptions/370f9536-8814-4fa1-92e2-0bca36db884a/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/bot-whatsapp-if",
+  "appService.deploySubpath": "."
+}
