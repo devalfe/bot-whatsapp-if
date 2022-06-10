@@ -50,7 +50,7 @@ const generateImage = (base64, cb = () => {}) => {
   qr_svg.pipe(require('fs').createWriteStream('./mediaSend/qr-code.svg'));
   console.log(`⚡ Recuerda que el QR se actualiza cada minuto ⚡'`);
   console.log(`⚡ Actualiza F5 el navegador para mantener el mejor QR⚡`);
-  cb();
+  //cb(); ==> No se usa porque no se puede usar async await
 };
 
 const checkEnvFile = () => {

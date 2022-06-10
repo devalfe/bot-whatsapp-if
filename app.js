@@ -182,7 +182,7 @@ const withOutSession = () => {
   client.on('qr', qr =>
     generateImage(qr, () => {
       qrcode.generate(qr, { small: true });
-      console.log(`Ver QR http://localhost:${port}/qrcode`);
+      //console.log(`Ver QR http://localhost:${port}/qrcode`);
       socketEvents.sendQR(qr);
     })
   );
@@ -195,7 +195,7 @@ const withOutSession = () => {
 
   client.on('auth_failure', e => {
     // console.log(e)
-    // connectionLost()
+    connectionLost();
   });
 
   client.on('authenticated', session => {
