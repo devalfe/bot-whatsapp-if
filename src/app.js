@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 
-const routes = require('./routes/web.route');
+const routes = require('../routes/web.route');
 const fs = require('fs');
 
 const config = require('config-lite');
 
-const mysqlConnection = require('./database/mysql');
+const mysqlConnection = require('../database/mysql');
 // const { middlewareClient } = require('./middleware/client');
 const {
   generateImage,
@@ -14,18 +14,18 @@ const {
   checkEnvFile,
   createClient,
   isValidNumber
-} = require('./services/handle');
-const { connectionReady, connectionLost } = require('./services/connection');
-const { saveMedia } = require('./services/save');
-const { getMessages, responseMessages, bothResponse } = require('./services/flows');
+} = require('../services/handle');
+const { connectionReady, connectionLost } = require('../services/connection');
+const { saveMedia } = require('../services/save');
+const { getMessages, responseMessages, bothResponse } = require('../services/flows');
 const {
   sendMedia,
   sendMessage,
   lastTrigger,
   sendMessageButton,
   readChat
-} = require('./services/send');
-const { socketEvents } = require('./services/socket');
+} = require('../services/send');
+const { socketEvents } = require('../services/socket');
 
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
