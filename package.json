@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "supervisor server.js",
     "dev": "cross-env NODE_ENV=development nodemon --harmony src/app.js --exec babel-node",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "start-dev": "nodemon --harmony src/app.js --exec babel-node",
     "start:prod": "export NODE_ENV=production&&node app",
     "lint": "eslint --color -c .eslintrc --ext .js .",
@@ -67,7 +66,8 @@
     "socket.io": "^4.4.1",
     "stormdb": "^0.5.2",
     "whatsapp-web.js": "^1.16.5",
-    "config-lite": "^1.5.0"
+    "config-lite": "^1.5.0",
+    "fs": "0.0.1-security"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
