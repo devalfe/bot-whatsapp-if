@@ -3,7 +3,7 @@
 const path = require('path');
 
 const PATHS = {
-  app: path.join(__dirname, 'src'),
+  app: path.join(__dirname, './'),
   public: path.join(__dirname, 'public')
 };
 
@@ -20,15 +20,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['react', 'es2015']
-            }
-          }
-        ]
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
