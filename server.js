@@ -5,6 +5,6 @@ const app = require('./src/app');
 const server = require('http').Server(app);
 // require('babel-core/register');
 
-server.listen(config.port, () => {
+server.listen(process.env.PORT, () => {
   console.log(`server is running at port ${config.port}`);
 });
