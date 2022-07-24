@@ -225,7 +225,7 @@ if (process.env.DATABASE === 'mysql') {
   mysqlConnection.connect();
 }
 
-server.listen(port, () => {
+server.listen(process.env.PORT, () => {
   console.log(`El server esta listo por el puerto ${port}`);
 });
 
