@@ -230,3 +230,4 @@ server.listen(process.env.PORT, () => {
 });
 
 checkEnvFile();
+module.exports = app;
