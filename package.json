@@ -5,10 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "cross-env NODE_ENV=development nodemon --harmony src/app.js --exec babel-node",
-    "start-dev": "nodemon --harmony src/app.js --exec babel-node",
-    "start:prod": "export NODE_ENV=production&&node app",
+    "start": "node ./bin/www",
     "lint": "eslint --color -c .eslintrc --ext .js .",
     "format:write": "prettier **/**/*.{ts,tsx,js,jsx,json} --write",
     "pretty-quick": "pretty-quick",
