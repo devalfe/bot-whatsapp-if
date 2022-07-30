@@ -1,6 +1,11 @@
 {
   "version": 2,
   "name": "nodejs-mysql",
-  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+  "builds": [
+    {
+      "src": "package.json", // as stated here in `vercel.json`
+      "use": "vercel-sapper"
+    }
+  ],
   "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
 }
